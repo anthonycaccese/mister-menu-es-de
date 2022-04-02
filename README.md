@@ -2,8 +2,8 @@
 
 ## Details
 
-- Designed to emulate the simplicity of the menu system for the MiSTer (all credit for design and layout to the MiSTer team)
 - Built for the development version of ES-DE (v2.0)
+- Designed to emulate the simplicity of the menu system for the MiSTer (all credit for design and layout to the MiSTer team)
 - To use at this time you must be using a development version of ES-DE built directly from source (see: https://gitlab.com/leonstyhre/emulationstation-de/-/blob/master/INSTALL-DEV.md)
 
 ## Preview
