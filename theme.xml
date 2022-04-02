@@ -1,0 +1,164 @@
+<!--
+theme name:    MiSTer Menu UI for ES-DE
+author:        Anthony Caccese
+license:       creative commons CC-BY-NC-SA
+-->
+
+<theme>
+
+   <variables>
+      <logoFont>./_inc/fonts/RetroGaming.ttf</logoFont>
+      <bodyFont>./_inc/fonts/ArcadePix.ttf</bodyFont>
+      <spacerImage>./_inc/images/space.png</spacerImage>
+   </variables>
+
+   <view name="system,gamelist">
+      <helpsystem name="help">
+         <pos>1 1</pos>
+      </helpsystem>
+      <image name="header">
+         <origin>0 0</origin>
+         <pos>0.3015625 0.183333333333333</pos><!-- 386 132 -->
+         <size>0.4 0.0625</size><!-- 512 45 -->
+         <path>${spacerImage}</path>
+         <color>FFDFDFEE</color>
+         <tile>true</tile>
+      </image>
+      <image name="left-column">
+         <origin>0 0</origin>
+         <pos>0.3015625 0.3</pos><!-- 386 216 -->
+         <size>0.03125 0.525</size><!-- 40 378 -->
+         <path>${spacerImage}</path>
+         <color>FFDFDFEE</color>
+         <tile>true</tile>
+      </image>
+      <image name="right-column">
+         <origin>0 0</origin>
+         <pos>0.3328125 0.3</pos><!-- 426 216 -->
+         <size>0.36875 0.525</size><!-- 472 378 -->
+         <path>${spacerImage}</path>
+         <color>1E0000EE</color>
+         <tile>true</tile>
+      </image>
+      <text name="screen-name">
+         <origin>0.5 0.5</origin>
+         <pos>0.3171875 0.566666666666667</pos><!-- 406 408 -->
+         <size>0.2953125 0.055555555555556</size><!-- 378 40  -->
+         <rotation>270</rotation>
+         <text>Games</text>
+         <fontPath>${logoFont}</fontPath>
+         <color>000000</color>
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <letterCase>uppercase</letterCase>
+         <horizontalAlignment>center</horizontalAlignment>
+      </text>
+      <textlist name="system-list,game-list">
+         <origin>0 0</origin>
+         <pos>0.3359375 0.3</pos><!-- 430 216 -->
+         <size>0.365625 0.533333333333333</size><!-- 468 384 -->
+         <horizontalAlignment>left</horizontalAlignment>
+         <fontSize>0.025</fontSize>
+         <lineSpacing>1.5</lineSpacing>
+         <fontPath>${bodyFont}</fontPath>
+         <horizontalMargin>0.008</horizontalMargin>
+         <selectorColor>FFDFDF</selectorColor>
+         <selectedColor>000000</selectedColor>
+         <primaryColor>FFDFDF</primaryColor>
+         <secondaryColor>FFDFDF</secondaryColor>
+         <zIndex>100</zIndex>
+      </textlist>
+      <!--<image name="slot-mask">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./_inc/images/slot-mask.png</path>
+         <zIndex>2</zIndex>
+         <tile>true</tile>
+      </image>-->
+   </view>
+
+   <view name="system">
+      <textlist name="system-list"></textlist>
+      <text name="distribution-name">
+         <origin>0 0</origin>
+         <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
+         <size>0.265625 0.025</size><!-- 340 20 -->
+         <text>ES-DE</text>
+         <fontPath>${logoFont}</fontPath>
+         <color>000000</color>
+         <fontSize>0.025</fontSize><!-- 20 -->
+         <letterCase>uppercase</letterCase>
+      </text>
+      <text name="screen-name">
+         <text>Systems</text>
+      </text>
+      <image name="background-art">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <size>1 0</size>
+         <path>./_inc/images/system-background.png</path>
+         <opacity>0.6</opacity>
+         <zIndex>1</zIndex>
+      </image>
+      <text name="game-list-count">
+         <origin>1 0</origin>
+         <pos>0.6890625 0.202777777777778</pos><!-- 882 146 -->
+         <size>0.328125 0.025</size><!-- 420 20 -->
+         <fontPath>${logoFont}</fontPath>
+         <fontSize>0.025</fontSize><!-- 20 -->
+         <color>000000bb</color>
+         <horizontalAlignment>right</horizontalAlignment>
+         <systemdata>gamecount</systemdata>
+      </text>
+   </view>
+
+   <variant name="system-view-game-selector">
+      <view name="system">
+         <gameselector name="background-art">
+            <selection>random</selection>
+            <gameCount>1</gameCount>
+         </gameselector>
+         <image name="background-art">
+            <gameselector>background-art</gameselector>
+            <imageType>screenshot</imageType>
+            <default>./_inc/images/system-background.png</default>
+         </image>
+      </view>
+   </variant>
+
+   <view name="gamelist">
+      <textlist name="game-list"></textlist>
+      <text name="system-name">
+         <origin>0 0</origin>
+         <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
+         <size>0.265625 0.025</size><!-- 340 20 -->
+         <text>${system.fullName}</text>
+         <fontPath>${logoFont}</fontPath>
+         <color>000000</color>
+         <fontSize>0.025</fontSize><!-- 20 -->
+         <letterCase>uppercase</letterCase>
+      </text>
+      <text name="screen-name">
+         <text>Games</text>
+      </text>
+      <image name="game-media">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos><!-- 640 360 -->
+         <size>1 0</size>
+         <default>./_inc/images/system-background.png</default>
+         <imageType>screenshot</imageType>
+         <opacity>0.6</opacity>
+         <zIndex>1</zIndex>
+      </image>
+      <gamelistinfo name="game-list-info">
+         <origin>1 0</origin>
+         <pos>0.6890625 0.202777777777778</pos><!-- 882 146 -->
+         <size>0.328125 0.025</size><!-- 420 20 -->
+         <fontPath>${logoFont}</fontPath>
+         <fontSize>0.025</fontSize><!-- 20 -->
+         <color>000000bb</color>
+         <horizontalAlignment>right</horizontalAlignment>
+      </gamelistinfo>
+   </view>
+
+</theme>
