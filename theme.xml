@@ -14,7 +14,10 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="system,gamelist">
       <helpsystem name="help">
-         <pos>1 1</pos>
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+         <fontPath>${bodyFont}</fontPath>
+         <fontSize>0.025</fontSize>
       </helpsystem>
       <image name="header">
          <origin>0 0</origin>
