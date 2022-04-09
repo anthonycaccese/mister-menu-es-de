@@ -1,13 +1,2 @@
 <themeCapabilities>
-
-    <variant name="default">
-        <label>Default</label>
-        <selectable>true</selectable>
-    </variant>
-
-    <variant name="system-view-game-selector">
-        <label>System View Game Selector</label>
-        <selectable>true</selectable>
-    </variant>
-
 </themeCapabilities>

@@ -10,6 +10,7 @@ license:       creative commons CC-BY-NC-SA
       <logoFont>./_inc/fonts/RetroGaming.ttf</logoFont>
       <bodyFont>./_inc/fonts/ArcadePix.ttf</bodyFont>
       <spacerImage>./_inc/images/space.png</spacerImage>
+      <themeCustomizationsPath>~/.emulationstation/theme-customizations/mister-menu-es-de/</themeCustomizationsPath>
    </variables>
 
    <view name="system,gamelist">
@@ -70,14 +71,6 @@ license:       creative commons CC-BY-NC-SA
          <secondaryColor>FFDFDF</secondaryColor>
          <zIndex>100</zIndex>
       </textlist>
-      <!--<image name="slot-mask">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size>
-         <path>./_inc/images/slot-mask.png</path>
-         <zIndex>2</zIndex>
-         <tile>true</tile>
-      </image>-->
    </view>
 
    <view name="system">
@@ -85,7 +78,7 @@ license:       creative commons CC-BY-NC-SA
       <text name="distribution-name">
          <origin>0 0</origin>
          <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-         <size>0.265625 0.025</size><!-- 340 20 -->
+         <size>0.0625 0.025</size><!-- 80 20 -->
          <text>ES-DE</text>
          <fontPath>${logoFont}</fontPath>
          <color>000000</color>
@@ -99,7 +92,8 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>1 0</size>
-         <path>./_inc/images/system-background.png</path>
+         <default>./_inc/images/system-background.png</default>
+         <path>${themeCustomizationsPath}system-background.jpg</path>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </image>
@@ -111,23 +105,9 @@ license:       creative commons CC-BY-NC-SA
          <fontSize>0.025</fontSize><!-- 20 -->
          <color>000000bb</color>
          <horizontalAlignment>right</horizontalAlignment>
-         <systemdata>gamecount</systemdata>
+         <systemdata>gamecount_games</systemdata>
       </text>
    </view>
-
-   <variant name="system-view-game-selector">
-      <view name="system">
-         <gameselector name="background-art">
-            <selection>random</selection>
-            <gameCount>1</gameCount>
-         </gameselector>
-         <image name="background-art">
-            <gameselector>background-art</gameselector>
-            <imageType>screenshot</imageType>
-            <default>./_inc/images/system-background.png</default>
-         </image>
-      </view>
-   </variant>
 
    <view name="gamelist">
       <textlist name="game-list"></textlist>
@@ -153,15 +133,6 @@ license:       creative commons CC-BY-NC-SA
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </image>
-      <gamelistinfo name="game-list-info">
-         <origin>1 0</origin>
-         <pos>0.6890625 0.202777777777778</pos><!-- 882 146 -->
-         <size>0.328125 0.025</size><!-- 420 20 -->
-         <fontPath>${logoFont}</fontPath>
-         <fontSize>0.025</fontSize><!-- 20 -->
-         <color>000000bb</color>
-         <horizontalAlignment>right</horizontalAlignment>
-      </gamelistinfo>
    </view>
 
 </theme>
