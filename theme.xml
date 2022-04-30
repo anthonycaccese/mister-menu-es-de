@@ -15,8 +15,10 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="system,gamelist">
       <helpsystem name="help">
-         <textColor>ffffff</textColor>
-         <iconColor>ffffff</iconColor>
+         <origin>0.5 0</origin>
+         <pos>0.5 0.91</pos>
+         <textColor>cccccc</textColor>
+         <iconColor>cccccc</iconColor>
          <fontPath>${bodyFont}</fontPath>
          <fontSize>0.025</fontSize>
       </helpsystem>
@@ -129,6 +131,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>0.5 0.5</pos><!-- 640 360 -->
          <size>1 0</size>
          <default>./_inc/images/system-background.png</default>
+         <default>${themeCustomizationsPath}system-background.jpg</default>
          <imageType>screenshot</imageType>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
