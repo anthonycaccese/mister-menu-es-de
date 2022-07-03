@@ -1,5 +1,5 @@
 <!--
-theme name:    MiSTer Menu UI for ES-DE
+theme name:    MiSTer Menu (ES-DE Edition)
 author:        Anthony Caccese
 license:       creative commons CC-BY-NC-SA
 -->
@@ -10,7 +10,7 @@ license:       creative commons CC-BY-NC-SA
       <logoFont>./_inc/fonts/RetroGaming.ttf</logoFont>
       <bodyFont>./_inc/fonts/ArcadePix.ttf</bodyFont>
       <spacerImage>./_inc/images/space.png</spacerImage>
-      <themeCustomizationsPath>~/.emulationstation/theme-customizations/mister-menu-es-de/</themeCustomizationsPath>
+      <backgroundImage>./_inc/images/system-background-alt.jpg</backgroundImage>
    </variables>
 
    <view name="system,gamelist">
@@ -71,6 +71,7 @@ license:       creative commons CC-BY-NC-SA
          <selectedColor>000000</selectedColor>
          <primaryColor>FFDFDF</primaryColor>
          <secondaryColor>FFDFDF</secondaryColor>
+         <indicators>ascii</indicators>
          <zIndex>100</zIndex>
       </textlist>
    </view>
@@ -94,8 +95,7 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>1 0</size>
-         <default>./_inc/images/system-background.png</default>
-         <path>${themeCustomizationsPath}system-background.jpg</path>
+         <path>${backgroundImage}</path>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </image>
@@ -116,7 +116,7 @@ license:       creative commons CC-BY-NC-SA
       <text name="system-name">
          <origin>0 0</origin>
          <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-         <size>0.265625 0.025</size><!-- 340 20 -->
+         <size>0.378125 0.025</size><!-- 480 20 -->
          <text>${system.fullName}</text>
          <fontPath>${logoFont}</fontPath>
          <color>000000</color>
@@ -130,12 +130,25 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos><!-- 640 360 -->
          <size>1 0</size>
-         <default>./_inc/images/system-background.png</default>
-         <default>${themeCustomizationsPath}system-background.jpg</default>
-         <imageType>screenshot</imageType>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </image>
    </view>
+
+   <variant name="gameScreenShotsOff">
+      <view name="gamelist">
+         <image name="game-media">
+            <path>${backgroundImage}</path>
+         </image>
+      </view>
+   </variant>
+
+   <variant name="gameScreenShotsOn">
+      <view name="gamelist">
+         <image name="game-media">
+            <imageType>screenshot</imageType>
+         </image>
+      </view>
+   </variant>
 
 </theme>

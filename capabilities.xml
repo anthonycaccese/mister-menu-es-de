@@ -1,2 +1,13 @@
 <themeCapabilities>
+
+   <variant name="gameScreenShotsOff">
+      <label>Screenshots Off</label>
+      <selectable>true</selectable>
+   </variant>
+
+   <variant name="gameScreenShotsOn">
+      <label>Screenshots On</label>
+      <selectable>true</selectable>
+   </variant>
+
 </themeCapabilities>
