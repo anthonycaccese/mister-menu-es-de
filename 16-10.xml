@@ -1,0 +1,72 @@
+<!--
+16:10 Apsect Ratio
+(based on 1152x720 Resolution)
+-->
+
+<theme>
+
+   <view name="system,gamelist">
+      <helpsystem name="help">
+         <pos>0.5 0.91</pos>
+         <fontSize>0.025</fontSize><!-- 18 -->
+      </helpsystem>
+      <image name="header">
+         <pos>0.277777777777778 0.183333333333333</pos><!-- 320 132 -->
+         <size>0.444444444444444 0.0625</size><!-- 512 45 -->
+      </image>
+      <image name="left-column">
+         <origin>0 0</origin>
+         <pos>0.277777777777778 0.3</pos><!-- 320 216 -->
+         <size>0.034722222222222 0.525</size><!-- 40 378 -->
+      </image>
+      <image name="right-column">
+         <origin>0 0</origin>
+         <pos>0.3125 0.3</pos><!-- 360 216 -->
+         <size>0.409722222222222 0.525</size><!-- 472 378 -->
+      </image>
+      <text name="screen-name">
+         <origin>0.5 0.5</origin>
+         <pos>0.295138888888889 0.566666666666667</pos><!-- 340 408 -->
+         <size>0.2953125 0.034722222222222</size><!-- 378 40  -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+      </text>
+      <textlist name="system-list,game-list">
+         <pos>0.315972222222222 0.3</pos><!-- 364 216 -->
+         <size>0.40625 0.533333333333333</size><!-- 468 384 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <lineSpacing>1.5</lineSpacing>
+         <horizontalMargin>0.008</horizontalMargin>
+      </textlist>
+   </view>
+
+   <view name="system">
+      <textlist name="system-list"></textlist>
+      <text name="distribution-name">
+         <pos>0.289930555555556 0.202777777777778</pos><!-- 334 146 -->
+         <size>0.069444444444444 0.025</size><!-- 80 18 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+      </text>
+      <image name="background-art">
+         <size>1 0</size>
+      </image>
+      <text name="game-list-count">
+         <pos>0.713541666666667 0.202777777777778</pos><!-- 822 146 -->
+         <size>0.364583333333333 0.025</size><!-- 420 18 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+      </text>
+   </view>
+
+   <view name="gamelist">
+      <textlist name="game-list"></textlist>
+      <text name="system-name">
+         <origin>0 0</origin>
+         <pos>0.289930555555556 0.202777777777778</pos><!-- 334 146 -->
+         <size>0.416666666666667 0.025</size><!-- 480 18 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+      </text>
+      <image name="game-media">
+         <size>1 0</size>
+      </image>
+   </view>
+
+</theme>

@@ -7,8 +7,8 @@ license:       creative commons CC-BY-NC-SA
 <theme>
 
    <variables>
-      <logoFont>./_inc/fonts/RetroGaming.ttf</logoFont>
-      <bodyFont>./_inc/fonts/ArcadePix.ttf</bodyFont>
+      <titleFont>./_inc/fonts/RetroGaming.ttf</titleFont>
+      <listFont>./_inc/fonts/ArcadePix.ttf</listFont>
       <spacerImage>./_inc/images/space.png</spacerImage>
       <backgroundImage>./_inc/images/system-background-alt.jpg</backgroundImage>
    </variables>
@@ -16,59 +16,42 @@ license:       creative commons CC-BY-NC-SA
    <view name="system,gamelist">
       <helpsystem name="help">
          <origin>0.5 0</origin>
-         <pos>0.5 0.91</pos>
          <textColor>cccccc</textColor>
          <iconColor>cccccc</iconColor>
-         <fontPath>${bodyFont}</fontPath>
-         <fontSize>0.025</fontSize>
+         <fontPath>${listFont}</fontPath>
       </helpsystem>
       <image name="header">
          <origin>0 0</origin>
-         <pos>0.3015625 0.183333333333333</pos><!-- 386 132 -->
-         <size>0.4 0.0625</size><!-- 512 45 -->
          <path>${spacerImage}</path>
          <color>FFDFDFEE</color>
          <tile>true</tile>
       </image>
       <image name="left-column">
          <origin>0 0</origin>
-         <pos>0.3015625 0.3</pos><!-- 386 216 -->
-         <size>0.03125 0.525</size><!-- 40 378 -->
          <path>${spacerImage}</path>
          <color>FFDFDFEE</color>
          <tile>true</tile>
       </image>
       <image name="right-column">
          <origin>0 0</origin>
-         <pos>0.3328125 0.3</pos><!-- 426 216 -->
-         <size>0.36875 0.525</size><!-- 472 378 -->
          <path>${spacerImage}</path>
          <color>1E0000EE</color>
          <tile>true</tile>
       </image>
       <text name="screen-name">
          <origin>0.5 0.5</origin>
-         <pos>0.3171875 0.566666666666667</pos><!-- 406 408 -->
-         <size>0.2953125 0.055555555555556</size><!-- 378 40  -->
          <rotation>270</rotation>
-         <text>Games</text>
-         <fontPath>${logoFont}</fontPath>
+         <fontPath>${titleFont}</fontPath>
          <color>000000</color>
-         <fontSize>0.025</fontSize><!-- 18 -->
          <letterCase>uppercase</letterCase>
          <horizontalAlignment>center</horizontalAlignment>
       </text>
       <textlist name="system-list,game-list">
          <origin>0 0</origin>
-         <pos>0.3359375 0.3</pos><!-- 430 216 -->
-         <size>0.365625 0.533333333333333</size><!-- 468 384 -->
          <horizontalAlignment>left</horizontalAlignment>
-         <fontSize>0.025</fontSize>
-         <lineSpacing>1.5</lineSpacing>
-         <fontPath>${bodyFont}</fontPath>
-         <horizontalMargin>0.008</horizontalMargin>
+         <fontPath>${listFont}</fontPath>
          <selectorColor>FFDFDF</selectorColor>
-         <selectedColor>000000</selectedColor>
+         <selectedColor>1E0000</selectedColor>
          <primaryColor>FFDFDF</primaryColor>
          <secondaryColor>FFDFDF</secondaryColor>
          <indicators>ascii</indicators>
@@ -80,12 +63,9 @@ license:       creative commons CC-BY-NC-SA
       <textlist name="system-list"></textlist>
       <text name="distribution-name">
          <origin>0 0</origin>
-         <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-         <size>0.0625 0.025</size><!-- 80 20 -->
          <text>ES-DE</text>
-         <fontPath>${logoFont}</fontPath>
-         <color>000000</color>
-         <fontSize>0.025</fontSize><!-- 20 -->
+         <fontPath>${titleFont}</fontPath>
+         <color>1E0000</color>
          <letterCase>uppercase</letterCase>
       </text>
       <text name="screen-name">
@@ -94,18 +74,14 @@ license:       creative commons CC-BY-NC-SA
       <image name="background-art">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
-         <size>1 0</size>
-         <path>${backgroundImage}</path>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
+         <path>${backgroundImage}</path>
       </image>
       <text name="game-list-count">
          <origin>1 0</origin>
-         <pos>0.6890625 0.202777777777778</pos><!-- 882 146 -->
-         <size>0.328125 0.025</size><!-- 420 20 -->
-         <fontPath>${logoFont}</fontPath>
-         <fontSize>0.025</fontSize><!-- 20 -->
-         <color>000000bb</color>
+         <fontPath>${titleFont}</fontPath>
+         <color>1E000099</color>
          <horizontalAlignment>right</horizontalAlignment>
          <systemdata>gamecount_games</systemdata>
       </text>
@@ -115,12 +91,9 @@ license:       creative commons CC-BY-NC-SA
       <textlist name="game-list"></textlist>
       <text name="system-name">
          <origin>0 0</origin>
-         <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-         <size>0.378125 0.025</size><!-- 480 20 -->
          <text>${system.fullName}</text>
-         <fontPath>${logoFont}</fontPath>
-         <color>000000</color>
-         <fontSize>0.025</fontSize><!-- 20 -->
+         <fontPath>${titleFont}</fontPath>
+         <color>1E0000</color>
          <letterCase>uppercase</letterCase>
       </text>
       <text name="screen-name">
@@ -128,8 +101,7 @@ license:       creative commons CC-BY-NC-SA
       </text>
       <image name="game-media">
          <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos><!-- 640 360 -->
-         <size>1 0</size>
+         <pos>0.5 0.5</pos>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </image>
@@ -150,5 +122,15 @@ license:       creative commons CC-BY-NC-SA
          </image>
       </view>
    </variant>
+
+   <!-- 16:9 Layout -->
+   <aspectRatio name="16:9">
+      <include>./16-9.xml</include>
+   </aspectRatio>
+
+   <!-- 16:9 Layout -->
+   <aspectRatio name="16:10">
+      <include>./16-10.xml</include>
+   </aspectRatio>
 
 </theme>
