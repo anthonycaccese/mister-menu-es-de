@@ -54,8 +54,8 @@ license:       creative commons CC-BY-NC-SA
          <selectedColor>1E0000</selectedColor>
          <primaryColor>FFDFDF</primaryColor>
          <secondaryColor>FFDFDF</secondaryColor>
-         <letterCaseCollections>capitalize</letterCaseCollections>
-         <letterCaseGroupedCollections>capitalize</letterCaseGroupedCollections>
+         <!--<letterCaseCollections>capitalize</letterCaseCollections>
+         <letterCaseGroupedCollections>capitalize</letterCaseGroupedCollections>-->
          <indicators>ascii</indicators>
          <collectionIndicators>ascii</collectionIndicators>
          <zIndex>100</zIndex>
