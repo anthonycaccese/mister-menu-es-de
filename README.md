@@ -17,3 +17,6 @@
 *Video*
 
 https://user-images.githubusercontent.com/1454947/161382508-504730dd-4cdd-4936-a1c0-9e207580950b.mp4
+
+## **Credit**
+"Crisp Mountain Air" background art created by [skeddles](https://lospec.com/skeddles)
