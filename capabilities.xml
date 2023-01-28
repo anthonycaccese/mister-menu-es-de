@@ -4,12 +4,12 @@
 
    <aspectRatio>16:9</aspectRatio>
    <aspectRatio>16:10</aspectRatio>
-
-   <colorScheme name="background-test-pattern">
-      <label>Test Pattern</label>
-   </colorScheme>
+   
    <colorScheme name="background-16bit-mountain">
       <label>16-bit Mountain</label>
+   </colorScheme>
+   <colorScheme name="background-test-pattern">
+      <label>Test Pattern</label>
    </colorScheme>
    <colorScheme name="background-pocky-rocky">
       <label>Pocky &amp; Rocky</label>
