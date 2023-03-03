@@ -102,6 +102,7 @@ license:       creative commons CC-BY-NC-SA
       <image name="background-art">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
+         <cropSize>1 1</cropSize>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
          <path>${backgroundImage}</path>
@@ -134,6 +135,7 @@ license:       creative commons CC-BY-NC-SA
       <image name="game-art">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
+         <cropSize>1 1</cropSize>
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </image>
@@ -157,7 +159,8 @@ license:       creative commons CC-BY-NC-SA
          <image name="game-art">
             <default>${backgroundImage}</default>
             <imageType>screenshot</imageType>
-            <interpolation>nearest</interpolation>  
+            <interpolation>nearest</interpolation>
+            <opacity>0.3</opacity>
          </image>
       </view>
    </variant>
@@ -210,9 +213,6 @@ license:       creative commons CC-BY-NC-SA
             <size>0.0625 0.025</size><!-- 80 18 -->
             <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <image name="background-art">
-            <size>1 0</size>
-         </image>
          <text name="game-count">
             <pos>0.6890625 0.202777777777778</pos><!-- 882 146 -->
             <size>0.328125 0.025</size><!-- 420 18 -->
@@ -227,9 +227,6 @@ license:       creative commons CC-BY-NC-SA
             <size>0.378125 0.025</size><!-- 480 18 -->
             <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <image name="game-art">
-            <size>1 0</size>
-         </image>
       </view>
    </aspectRatio>
    <aspectRatio name="16:10">
@@ -273,9 +270,6 @@ license:       creative commons CC-BY-NC-SA
             <size>0.069444444444444 0.025</size><!-- 80 18 -->
             <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <image name="background-art">
-            <size>1 0</size>
-         </image>
          <text name="game-count">
             <pos>0.713541666666667 0.202777777777778</pos><!-- 822 146 -->
             <size>0.364583333333333 0.025</size><!-- 420 18 -->
@@ -290,9 +284,6 @@ license:       creative commons CC-BY-NC-SA
             <size>0.416666666666667 0.025</size><!-- 480 18 -->
             <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <image name="game-art">
-            <size>1 0</size>
-         </image>
       </view>
    </aspectRatio>
 
