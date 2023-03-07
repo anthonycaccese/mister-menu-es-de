@@ -160,7 +160,7 @@ license:       creative commons CC-BY-NC-SA
             <default>${backgroundImage}</default>
             <imageType>screenshot</imageType>
             <interpolation>nearest</interpolation>
-            <opacity>0.3</opacity>
+            <opacity>0.6</opacity>
          </image>
       </view>
    </variant>
