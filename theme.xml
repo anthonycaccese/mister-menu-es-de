@@ -9,6 +9,7 @@ license:       creative commons CC-BY-NC-SA
    <variables>
       <titleFont>./_inc/fonts/RetroGaming.ttf</titleFont>
       <listFont>./_inc/fonts/ArcadePix.ttf</listFont>
+      <regularFont>./_inc/fonts/Oxygen-Regular.ttf</regularFont>
       <spacerImage>./_inc/images/space.png</spacerImage>
    </variables>
 
@@ -41,9 +42,9 @@ license:       creative commons CC-BY-NC-SA
    <view name="system,gamelist">
       <helpsystem name="help">
          <origin>0.5 0</origin>
-         <textColor>cccccc</textColor>
-         <iconColor>cccccc</iconColor>
-         <fontPath>${listFont}</fontPath>
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+         <fontPath>${regularFont}</fontPath>
       </helpsystem>
       <image name="header">
          <origin>0 0</origin>
@@ -170,13 +171,14 @@ license:       creative commons CC-BY-NC-SA
    Aspect Ratios
    16:9 based on 1280x720 Resolution
    16:10 based on 1152x720 Resolution
+   4:3 based on 960x720 Resolution
    ///
    -->
    <aspectRatio name="16:9">
       <view name="system,gamelist">
          <helpsystem name="help">
-            <pos>0.5 0.91</pos>
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <pos>0.5 0.94</pos>
+            <fontSize>0.022222222222222</fontSize><!-- 16 -->
          </helpsystem>
          <image name="header">
             <pos>0.3015625 0.183333333333333</pos><!-- 386 132 -->
@@ -193,7 +195,6 @@ license:       creative commons CC-BY-NC-SA
             <size>0.36875 0.525</size><!-- 472 378 -->
          </image>
          <text name="screen-name">
-            <origin>0.5 0.5</origin>
             <pos>0.3171875 0.566666666666667</pos><!-- 406 408 -->
             <size>0.2953125 0.055555555555556</size><!-- 378 40  -->
             <fontSize>0.025</fontSize><!-- 18 -->
@@ -232,8 +233,8 @@ license:       creative commons CC-BY-NC-SA
    <aspectRatio name="16:10">
       <view name="system,gamelist">
          <helpsystem name="help">
-            <pos>0.5 0.91</pos>
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <pos>0.5 0.94</pos>
+            <fontSize>0.022222222222222</fontSize><!-- 16 -->
          </helpsystem>
          <image name="header">
             <pos>0.277777777777778 0.183333333333333</pos><!-- 320 132 -->
@@ -250,7 +251,6 @@ license:       creative commons CC-BY-NC-SA
             <size>0.409722222222222 0.525</size><!-- 472 378 -->
          </image>
          <text name="screen-name">
-            <origin>0.5 0.5</origin>
             <pos>0.295138888888889 0.566666666666667</pos><!-- 340 408 -->
             <size>0.2953125 0.034722222222222</size><!-- 378 40  -->
             <fontSize>0.025</fontSize><!-- 18 -->
@@ -286,5 +286,90 @@ license:       creative commons CC-BY-NC-SA
          </text>
       </view>
    </aspectRatio>
+   <aspectRatio name="4:3">
+      <view name="system,gamelist">
+         <helpsystem name="help">
+            <pos>0.5 0.94</pos>
+            <fontSize>0.022222222222222</fontSize><!-- 16 -->
+         </helpsystem>
+         <image name="header">
+            <pos>0.235416666666667 0.183333333333333</pos><!-- 226 132 -->
+            <size>0.533333333333333 0.0625</size><!-- 512 45 -->
+         </image>
+         <image name="left-column">
+            <origin>0 0</origin>
+            <pos>0.235416666666667 0.3</pos><!-- 226 216 -->
+            <size>0.041666666666667 0.525</size><!-- 40 378 -->
+         </image>
+         <image name="right-column">
+            <origin>0 0</origin>
+            <pos>0.277083333333333 0.3</pos><!-- 266 216 -->
+            <size>0.491666666666667 0.525</size><!-- 472 378 -->
+         </image>
+         <text name="screen-name">
+            <pos>0.25625 0.566666666666667</pos><!-- 246 408 -->
+            <size>0.39375 0.034722222222222</size><!-- 378 40  -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+         </text>
+         <textlist name="system-list,game-list">
+            <pos>0.28125 0.3</pos><!-- 270 216 -->
+            <size>0.4875 0.533333333333333</size><!-- 468 384 -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+            <lineSpacing>1.5</lineSpacing>
+            <horizontalMargin>0.008</horizontalMargin>
+         </textlist>
+      </view>
+      <view name="system">
+         <textlist name="system-list"></textlist>
+         <text name="distribution-name">
+            <pos>0.25 0.202777777777778</pos><!-- 240 146 -->
+            <size>0.083333333333333 0.025</size><!-- 80 18 -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+         </text>
+         <text name="game-count">
+            <pos>0.752083333333333 0.202777777777778</pos><!-- 722 146 -->
+            <size>0.4375 0.025</size><!-- 420 18 -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+         </text>
+      </view>
+      <view name="gamelist">
+         <textlist name="game-list"></textlist>
+         <text name="system-name">
+            <origin>0 0</origin>
+            <pos>0.25 0.202777777777778</pos><!-- 240 146 -->
+            <size>0.5 0.025</size><!-- 480 18 -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+         </text>
+      </view>
+   </aspectRatio>
+
+   <!--
+   ///
+   Sounds
+   ///
+   -->
+   <view name="all">
+      <sound name="systembrowse">
+         <path>./_inc/sounds/systembrowse.wav</path>
+      </sound>
+      <sound name="quicksysselect">
+         <path>./_inc/sounds/quicksysselect.wav</path>
+      </sound>
+      <sound name="select">
+         <path>./_inc/sounds/select.wav</path>
+      </sound>
+      <sound name="back">
+         <path>./_inc/sounds/back.wav</path>
+      </sound>
+      <sound name="scroll">
+         <path>./_inc/sounds/scroll.wav</path>
+      </sound>
+      <sound name="favorite">
+         <path>./_inc/sounds/favorite.wav</path>
+      </sound>
+      <sound name="launch">
+         <path>./_inc/sounds/launch.wav</path>
+      </sound>
+   </view>
 
 </theme>

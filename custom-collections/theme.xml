@@ -40,4 +40,18 @@
          </text>
       </view>
    </aspectRatio>
+   <aspectRatio name="4:3">
+      <view name="gamelist">
+         <text name="custom-collection-seperator">
+            <pos>0.416666666666667 0.202777777777778</pos><!-- 400 146 -->
+            <size>0.083333333333333 0.025</size><!-- 80 18 -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+         </text>
+         <text name="custom-collection-name">
+            <pos>0.435416666666667 0.202777777777778</pos><!-- 418 146 -->
+            <size>0.208333333333333 0.025</size><!-- 200 18 -->
+            <fontSize>0.025</fontSize><!-- 18 -->
+         </text>
+      </view>
+   </aspectRatio>
 </theme>
