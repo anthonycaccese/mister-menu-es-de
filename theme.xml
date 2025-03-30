@@ -97,6 +97,7 @@ license:       creative commons CC-BY-NC-SA
          <height>${titleFontSize}</height>
          <customIcon icon="icon_bluetooth">./_inc/images/icon-bluetooth.svg</customIcon>
          <customIcon icon="icon_wifi">./_inc/images/icon-wifi.svg</customIcon>
+         <customIcon icon="icon_cellular">./_inc/images/icon-cellular.svg</customIcon>
          <customIcon icon="icon_battery_charging">./_inc/images/icon-battery-charging.svg</customIcon>
          <customIcon icon="icon_battery_full">./_inc/images/icon-battery-full.svg</customIcon>
          <customIcon icon="icon_battery_high">./_inc/images/icon-battery-high.svg</customIcon>
@@ -300,7 +301,7 @@ license:       creative commons CC-BY-NC-SA
       <view name="system">
          <text name="distribution-name">
             <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-            <size>0.0625 0.025</size><!-- 80 18 -->
+            <size>0.265625 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
@@ -348,7 +349,7 @@ license:       creative commons CC-BY-NC-SA
       <view name="system">
          <text name="distribution-name">
             <pos>0.289930555555556 0.202777777777778</pos><!-- 334 146 -->
-            <size>0.069444444444444 0.025</size><!-- 80 18 -->
+            <size>0.29513889 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
@@ -396,7 +397,7 @@ license:       creative commons CC-BY-NC-SA
       <view name="system">
          <text name="distribution-name">
             <pos>0.25 0.202777777777778</pos><!-- 240 146 -->
-            <size>0.083333333333333 0.025</size><!-- 80 18 -->
+            <size>0.35416667 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
@@ -444,7 +445,7 @@ license:       creative commons CC-BY-NC-SA
       <view name="system">
          <text name="distribution-name">
             <pos>0.16666667 0.202777777777778</pos><!-- 120 146 -->
-            <size>0.11111111 0.025</size><!-- 80 18 -->
+            <size>0.47222222 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
