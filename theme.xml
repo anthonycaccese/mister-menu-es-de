@@ -6,6 +6,11 @@ license:       creative commons CC-BY-NC-SA
 
 <theme>
 
+   <!--
+   ///
+   Variables
+   ///
+   -->
    <variables>
       <titleFont>./_inc/fonts/RetroGaming.ttf</titleFont>
       <listFont>./_inc/fonts/ArcadePix.ttf</listFont>
@@ -35,17 +40,28 @@ license:       creative commons CC-BY-NC-SA
    </colorScheme>
    <colorScheme name="background-custom">
       <variables>
-         <backgroundImage>./_inc/images/backgrounds/background-custom.jpg</backgroundImage>
+         <backgroundImage>./theme-customizations/bg.png</backgroundImage>
       </variables>
    </colorScheme>
 
+   <!--
+   ///
+   All Views
+   ///
+   -->
    <view name="system,gamelist">
-      <helpsystem name="help">
-         <origin>0.5 0</origin>
-         <textColor>ffffff</textColor>
-         <iconColor>ffffff</iconColor>
-         <fontPath>${regularFont}</fontPath>
-      </helpsystem>
+      <image name="background">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <cropSize>1 1</cropSize>
+         <opacity>0.6</opacity>
+         <zIndex>1</zIndex>
+         <path>${backgroundImage}</path>
+         <interpolation>linear</interpolation>
+      </image>
+      <clock name="clock">
+         <opacity>0</opacity>
+      </clock>
       <image name="header">
          <origin>0 0</origin>
          <path>${spacerImage}</path>
@@ -71,8 +87,24 @@ license:       creative commons CC-BY-NC-SA
          <color>000000</color>
          <letterCase>uppercase</letterCase>
          <horizontalAlignment>center</horizontalAlignment>
+         <fontSize>${titleFontSize}</fontSize>
       </text>
-      <textlist name="system-list,game-list">
+      <systemstatus name="system-status">
+         <scope>view</scope>
+         <origin>1 0.5</origin>
+         <fontPath>${titleFont}</fontPath>
+         <color>1E0000</color>
+         <height>${titleFontSize}</height>
+         <customIcon icon="icon_bluetooth">./_inc/images/icon-bluetooth.svg</customIcon>
+         <customIcon icon="icon_wifi">./_inc/images/icon-wifi.svg</customIcon>
+         <customIcon icon="icon_cellular">./_inc/images/icon-cellular.svg</customIcon>
+         <customIcon icon="icon_battery_charging">./_inc/images/icon-battery-charging.svg</customIcon>
+         <customIcon icon="icon_battery_full">./_inc/images/icon-battery-full.svg</customIcon>
+         <customIcon icon="icon_battery_high">./_inc/images/icon-battery-high.svg</customIcon>
+         <customIcon icon="icon_battery_medium">./_inc/images/icon-battery-medium.svg</customIcon>
+         <customIcon icon="icon_battery_low">./_inc/images/icon-battery-low.svg</customIcon>
+      </systemstatus>
+      <textlist name="list">
          <origin>0 0</origin>
          <horizontalAlignment>left</horizontalAlignment>
          <fontPath>${listFont}</fontPath>
@@ -80,35 +112,93 @@ license:       creative commons CC-BY-NC-SA
          <selectedColor>1E0000</selectedColor>
          <primaryColor>FFDFDF</primaryColor>
          <secondaryColor>FFDFDF</secondaryColor>
+         <systemNameSuffix>false</systemNameSuffix>
          <letterCaseAutoCollections>capitalize</letterCaseAutoCollections>
          <letterCaseCustomCollections>capitalize</letterCaseCustomCollections>
          <indicators>ascii</indicators>
          <collectionIndicators>ascii</collectionIndicators>
          <zIndex>100</zIndex>
+         <fontSize>${listFontSize}</fontSize>
+         <lineSpacing>${listLineSpacing}</lineSpacing>
       </textlist>
+      <helpsystem name="help">
+         <scope>view</scope>
+         <origin>0.5 1</origin>
+         <fontPath>${titleFont}</fontPath>
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+         <fontPath>${titleFont}</fontPath>
+         <backgroundColor>1E0000EE</backgroundColor>
+         <backgroundVerticalPadding>0.02222222 0.02222222</backgroundVerticalPadding><!-- 16 -->
+         <fontSize>${helpFontSize}</fontSize>
+         <entries>start,select,b,a,x</entries>
+         <!-- Start Button -->
+         <customButtonIcon button="button_start_PS123">./_inc/images/help-button-start.svg</customButtonIcon>
+         <customButtonIcon button="button_start_PS4">./_inc/images/help-button-start.svg</customButtonIcon>
+         <customButtonIcon button="button_start_PS5">./_inc/images/help-button-start.svg</customButtonIcon>
+         <customButtonIcon button="button_start_SNES">./_inc/images/help-button-start.svg</customButtonIcon>
+         <customButtonIcon button="button_start_switch">./_inc/images/help-button-start.svg</customButtonIcon>
+         <customButtonIcon button="button_start_XBOX">./_inc/images/help-button-start.svg</customButtonIcon>
+         <customButtonIcon button="button_start_XBOX360">./_inc/images/help-button-start.svg</customButtonIcon>
+         <!-- Back Button -->
+         <customButtonIcon button="button_back_PS123">./_inc/images/help-button-back.svg</customButtonIcon>
+         <customButtonIcon button="button_back_PS4">./_inc/images/help-button-back.svg</customButtonIcon>
+         <customButtonIcon button="button_back_PS5">./_inc/images/help-button-back.svg</customButtonIcon>
+         <customButtonIcon button="button_back_SNES">./_inc/images/help-button-back.svg</customButtonIcon>
+         <customButtonIcon button="button_back_switch">./_inc/images/help-button-back.svg</customButtonIcon>
+         <customButtonIcon button="button_back_XBOX">./_inc/images/help-button-back.svg</customButtonIcon>
+         <customButtonIcon button="button_back_XBOX360">./_inc/images/help-button-back.svg</customButtonIcon>
+         <!-- East Button -->
+         <customButtonIcon button="button_b_XBOX">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_b_PS">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_b_switch">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_b_SNES">./_inc/images/help-button-east.svg</customButtonIcon>
+         <!-- South Button -->
+         <customButtonIcon button="button_a_XBOX">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_a_PS">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_a_switch">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_a_SNES">./_inc/images/help-button-south.svg</customButtonIcon>
+         <!-- North Button -->
+         <customButtonIcon button="button_y_XBOX">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="button_y_PS">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="button_y_switch">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_y_SNES">./_inc/images/help-button-north.svg</customButtonIcon>
+         <!-- West Button -->
+         <customButtonIcon button="button_x_XBOX">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_x_PS">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_x_switch">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="button_x_SNES">./_inc/images/help-button-west.svg</customButtonIcon>
+      </helpsystem>
+      <helpsystem name="help-menu-view">
+         <scope>menu</scope>
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.95</pos>
+         <iconColor>cccccc</iconColor>
+         <textColor>cccccc</textColor>
+         <backgroundColor>181818</backgroundColor>
+         <backgroundHorizontalPadding>0.05 0.05</backgroundHorizontalPadding>
+         <backgroundVerticalPadding>0.05 0.05</backgroundVerticalPadding>
+         <backgroundCornerRadius>0.005</backgroundCornerRadius>
+      </helpsystem>
    </view>
 
+   <!--
+   ///
+   System View
+   ///
+   -->
    <view name="system">
-      <textlist name="system-list"></textlist>
       <text name="distribution-name">
          <origin>0 0</origin>
          <text>ES-DE</text>
          <fontPath>${titleFont}</fontPath>
          <color>1E0000</color>
          <letterCase>uppercase</letterCase>
+         <fontSize>${titleFontSize}</fontSize>
       </text>
       <text name="screen-name">
          <text>Systems</text>
       </text>
-      <image name="background-art">
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos>
-         <cropSize>1 1</cropSize>
-         <opacity>0.6</opacity>
-         <zIndex>1</zIndex>
-         <path>${backgroundImage}</path>
-         <interpolation>linear</interpolation>
-      </image>
       <text name="game-count">
          <origin>1 0</origin>
          <fontPath>${titleFont}</fontPath>
@@ -119,14 +209,21 @@ license:       creative commons CC-BY-NC-SA
       </text>
    </view>
 
+   <!--
+   ///
+   Gamelist View
+   ///
+   -->
    <view name="gamelist">
-      <textlist name="game-list"></textlist>
       <text name="system-name">
          <origin>0 0</origin>
          <text>${system.fullName}</text>
          <fontPath>${titleFont}</fontPath>
          <color>1E0000</color>
          <letterCase>uppercase</letterCase>
+         <container>true</container>
+         <containerType>horizontal</containerType>
+         <fontSize>${titleFontSize}</fontSize>
       </text>
       <text name="custom-collection-name,custom-collection-seperator">
          <fontPath>${titleFont}</fontPath>
@@ -134,53 +231,42 @@ license:       creative commons CC-BY-NC-SA
       <text name="screen-name">
          <text>Games</text>
       </text>
-      <image name="game-art">
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos>
-         <cropSize>1 1</cropSize>
-         <opacity>0.6</opacity>
-         <zIndex>1</zIndex>
-      </image>
    </view>
+
+   
 
    <!--
    ///
-   Variants
+   Font Size
    ///
    -->
-   <variant name="gameScreenShotsOff">
-      <view name="gamelist">
-         <image name="game-art">
-            <path>${backgroundImage}</path>
-            <interpolation>linear</interpolation>
-         </image>
-      </view>
-   </variant>
-   <variant name="gameScreenShotsOn">
-      <view name="gamelist">
-         <image name="game-art">
-            <default>${backgroundImage}</default>
-            <imageType>screenshot</imageType>
-            <interpolation>nearest</interpolation>
-            <opacity>0.6</opacity>
-         </image>
-      </view>
-   </variant>
+   <fontSize name="medium">
+      <variables>
+         <listFontSize>0.02638889</listFontSize><!-- 19 -->
+         <listLineSpacing>1.5325</listLineSpacing>
+         <helpFontSize>0.022222222222222</helpFontSize><!-- 16 -->
+         <titleFontSize>0.025</titleFontSize><!-- 18 -->
+      </variables>
+   </fontSize>
+   <fontSize name="large">
+      <variables>
+         <listFontSize>0.03888889</listFontSize><!-- 28 -->
+         <listLineSpacing>1.5</listLineSpacing>
+         <helpFontSize>0.03055556</helpFontSize><!-- 22 -->
+         <titleFontSize>0.03055556</titleFontSize><!-- 22 -->
+      </variables>
+   </fontSize>
+
+
 
    <!--
    ///
    Aspect Ratios
-   16:9 based on 1280x720 Resolution
-   16:10 based on 1152x720 Resolution
-   4:3 based on 960x720 Resolution
    ///
    -->
+   <!-- 16:9 based on 1280x720 Resolution -->
    <aspectRatio name="16:9">
       <view name="system,gamelist">
-         <helpsystem name="help">
-            <pos>0.5 0.94</pos>
-            <fontSize>0.022222222222222</fontSize><!-- 16 -->
-         </helpsystem>
          <image name="header">
             <pos>0.3015625 0.183333333333333</pos><!-- 386 132 -->
             <size>0.4 0.0625</size><!-- 512 45 -->
@@ -198,45 +284,37 @@ license:       creative commons CC-BY-NC-SA
          <text name="screen-name">
             <pos>0.3171875 0.566666666666667</pos><!-- 406 408 -->
             <size>0.2953125 0.055555555555556</size><!-- 378 40  -->
-            <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <textlist name="system-list,game-list">
+         <systemstatus name="system-status">
+            <pos>0.6890625 0.21527778</pos><!-- 882 155 -->
+         </systemstatus>
+         <textlist name="list">
             <pos>0.3359375 0.3</pos><!-- 430 216 -->
-            <size>0.365625 0.533333333333333</size><!-- 468 384 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
-            <lineSpacing>1.5</lineSpacing>
+            <size>0.365625 0.525</size><!-- 468 378 -->
             <horizontalMargin>0.008</horizontalMargin>
          </textlist>
+         <helpsystem name="help">
+            <pos>0.5 0.97777778</pos><!-- 704 -->
+            <backgroundHorizontalPadding>0.0125 0.0125</backgroundHorizontalPadding><!-- 16 -->
+         </helpsystem>
       </view>
       <view name="system">
-         <textlist name="system-list"></textlist>
          <text name="distribution-name">
             <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-            <size>0.0625 0.025</size><!-- 80 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
-         </text>
-         <text name="game-count">
-            <pos>0.6890625 0.202777777777778</pos><!-- 882 146 -->
-            <size>0.328125 0.025</size><!-- 420 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <size>0.265625 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
-         <textlist name="game-list"></textlist>
          <text name="system-name">
             <origin>0 0</origin>
             <pos>0.3125 0.202777777777778</pos><!-- 400 146 -->
-            <size>0.378125 0.025</size><!-- 480 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <size>0.265625 0.025</size><!-- 340 18 -->
          </text>
       </view>
    </aspectRatio>
+   <!-- 16:10 based on 1152x720 Resolution -->
    <aspectRatio name="16:10">
       <view name="system,gamelist">
-         <helpsystem name="help">
-            <pos>0.5 0.94</pos>
-            <fontSize>0.022222222222222</fontSize><!-- 16 -->
-         </helpsystem>
          <image name="header">
             <pos>0.277777777777778 0.183333333333333</pos><!-- 320 132 -->
             <size>0.444444444444444 0.0625</size><!-- 512 45 -->
@@ -254,45 +332,37 @@ license:       creative commons CC-BY-NC-SA
          <text name="screen-name">
             <pos>0.295138888888889 0.566666666666667</pos><!-- 340 408 -->
             <size>0.2953125 0.034722222222222</size><!-- 378 40  -->
-            <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <textlist name="system-list,game-list">
+         <systemstatus name="system-status">
+            <pos>0.713541666666667 0.21527778</pos><!-- 822 155 -->
+         </systemstatus>
+         <textlist name="list">
             <pos>0.315972222222222 0.3</pos><!-- 364 216 -->
-            <size>0.40625 0.533333333333333</size><!-- 468 384 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
-            <lineSpacing>1.5</lineSpacing>
+            <size>0.40625 0.525</size><!-- 468 378 -->
             <horizontalMargin>0.008</horizontalMargin>
          </textlist>
+         <helpsystem name="help">
+            <pos>0.5 0.97777778</pos><!-- 704 -->
+            <backgroundHorizontalPadding>0.01388889 0.01388889</backgroundHorizontalPadding><!-- 16 -->
+         </helpsystem>
       </view>
       <view name="system">
-         <textlist name="system-list"></textlist>
          <text name="distribution-name">
             <pos>0.289930555555556 0.202777777777778</pos><!-- 334 146 -->
-            <size>0.069444444444444 0.025</size><!-- 80 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
-         </text>
-         <text name="game-count">
-            <pos>0.713541666666667 0.202777777777778</pos><!-- 822 146 -->
-            <size>0.364583333333333 0.025</size><!-- 420 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <size>0.29513889 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
-         <textlist name="game-list"></textlist>
          <text name="system-name">
             <origin>0 0</origin>
             <pos>0.289930555555556 0.202777777777778</pos><!-- 334 146 -->
-            <size>0.416666666666667 0.025</size><!-- 480 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <size>0.29513889 0.025</size><!-- 340 18 -->
          </text>
       </view>
    </aspectRatio>
+   <!-- 4:3 based on 960x720 Resolution -->
    <aspectRatio name="4:3">
       <view name="system,gamelist">
-         <helpsystem name="help">
-            <pos>0.5 0.94</pos>
-            <fontSize>0.022222222222222</fontSize><!-- 16 -->
-         </helpsystem>
          <image name="header">
             <pos>0.235416666666667 0.183333333333333</pos><!-- 226 132 -->
             <size>0.533333333333333 0.0625</size><!-- 512 45 -->
@@ -310,36 +380,79 @@ license:       creative commons CC-BY-NC-SA
          <text name="screen-name">
             <pos>0.25625 0.566666666666667</pos><!-- 246 408 -->
             <size>0.39375 0.034722222222222</size><!-- 378 40  -->
-            <fontSize>0.025</fontSize><!-- 18 -->
          </text>
-         <textlist name="system-list,game-list">
+         <systemstatus name="system-status">
+            <pos>0.752083333333333 0.21527778</pos><!-- 722 155 -->
+         </systemstatus>
+         <textlist name="list">
             <pos>0.28125 0.3</pos><!-- 270 216 -->
-            <size>0.4875 0.533333333333333</size><!-- 468 384 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
-            <lineSpacing>1.5</lineSpacing>
+            <size>0.4875 0.525</size><!-- 468 378 -->
             <horizontalMargin>0.008</horizontalMargin>
          </textlist>
+         <helpsystem name="help">
+            <pos>0.5 0.97777778</pos><!-- 704 -->
+            <backgroundHorizontalPadding>0.01666667 0.01666667</backgroundHorizontalPadding><!-- 16 -->
+         </helpsystem>
       </view>
       <view name="system">
-         <textlist name="system-list"></textlist>
          <text name="distribution-name">
             <pos>0.25 0.202777777777778</pos><!-- 240 146 -->
-            <size>0.083333333333333 0.025</size><!-- 80 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
-         </text>
-         <text name="game-count">
-            <pos>0.752083333333333 0.202777777777778</pos><!-- 722 146 -->
-            <size>0.4375 0.025</size><!-- 420 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <size>0.35416667 0.025</size><!-- 340 18 -->
          </text>
       </view>
       <view name="gamelist">
-         <textlist name="game-list"></textlist>
          <text name="system-name">
             <origin>0 0</origin>
             <pos>0.25 0.202777777777778</pos><!-- 240 146 -->
-            <size>0.5 0.025</size><!-- 480 18 -->
-            <fontSize>0.025</fontSize><!-- 18 -->
+            <size>0.35416667 0.025</size><!-- 340 18 -->
+         </text>
+      </view>
+   </aspectRatio>
+   <!-- 1:1 based on 720x720 Resolution -->
+   <aspectRatio name="1:1">
+      <view name="system,gamelist">
+         <image name="header">
+            <pos>0.14722222 0.183333333333333</pos><!-- 106 132 -->
+            <size>0.71111111 0.0625</size><!-- 512 45 -->
+         </image>
+         <image name="left-column">
+            <origin>0 0</origin>
+            <pos>0.14722222 0.3</pos><!-- 106 216 -->
+            <size>0.05555556 0.525</size><!-- 40 378 -->
+         </image>
+         <image name="right-column">
+            <origin>0 0</origin>
+            <pos>0.20277778 0.3</pos><!-- 146 216 -->
+            <size>0.65555556 0.525</size><!-- 472 378 -->
+         </image>
+         <text name="screen-name">
+            <pos>0.175 0.566666666666667</pos><!-- 126 408 -->
+            <size>0.525 0.034722222222222</size><!-- 378 40  -->
+         </text>
+         <systemstatus name="system-status">
+            <pos>0.83611111 0.21527778</pos><!-- 602 155 -->
+         </systemstatus>
+         <textlist name="list">
+            <pos>0.20833333 0.3</pos><!-- 150 216 -->
+            <size>0.65 0.525</size><!-- 468 378 -->
+            <horizontalMargin>0.008</horizontalMargin>
+         </textlist>
+         <helpsystem name="help">
+            <pos>0.5 0.97777778</pos><!-- 704 -->
+            <backgroundHorizontalPadding>0.02222222 0.02222222</backgroundHorizontalPadding><!-- 16 -->
+         </helpsystem>
+      </view>
+      <view name="system">
+         <text name="distribution-name">
+            <pos>0.16666667 0.202777777777778</pos><!-- 120 146 -->
+            <size>0.47222222 0.025</size><!-- 340 18 -->
+         </text>
+      </view>
+      <view name="gamelist">
+         <text name="system-name">
+            <origin>0 0</origin>
+            <pos>0.16666667 0.202777777777778</pos><!-- 120 146 -->
+            <size>0.47222222 0.025</size><!-- 340 18 -->
          </text>
       </view>
    </aspectRatio>

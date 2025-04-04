@@ -2,10 +2,29 @@
    
    <themeName>MiSTer Menu</themeName>
 
+   <!--
+   ///
+   Aspect Ratios
+   ///
+   -->
    <aspectRatio>16:9</aspectRatio>
    <aspectRatio>16:10</aspectRatio>
    <aspectRatio>4:3</aspectRatio>
-   
+   <aspectRatio>1:1</aspectRatio>
+
+   <!--
+   ///
+   Font Size
+   ///
+   -->
+   <fontSize>medium</fontSize>
+   <fontSize>large</fontSize>
+
+   <!--
+   ///
+   Color Schemes
+   ///
+   -->
    <colorScheme name="background-16bit-mountain">
       <label>Crisp Mountain Air (by skeddles)</label>
    </colorScheme>
@@ -19,6 +38,11 @@
       <label>Custom</label>
    </colorScheme>
 
+   <!--
+   ///
+   Transitions
+   ///
+   -->
    <transitions name="transitions">
       <label>transitions</label>
       <selectable>false</selectable>
@@ -34,14 +58,5 @@
       <entry>builtin-slide</entry>
       <entry>builtin-fade</entry>
    </suppressTransitionProfiles>
-
-   <variant name="gameScreenShotsOff">
-      <label>Screenshots Off</label>
-      <selectable>true</selectable>
-   </variant>
-   <variant name="gameScreenShotsOn">
-      <label>Screenshots On</label>
-      <selectable>true</selectable>
-   </variant>
 
 </themeCapabilities>
