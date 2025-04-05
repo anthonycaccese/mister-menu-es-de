@@ -67,28 +67,21 @@ license:       creative commons CC-BY-NC-SA
          <pos>0.99 0.01</pos>
          <backgroundColor>222222</backgroundColor>
          <color>cccccc</color>
-         <backgroundHorizontalPadding>0.01 0.02</backgroundHorizontalPadding>
+         <backgroundHorizontalPadding>0.0075 0.02</backgroundHorizontalPadding>
          <backgroundVerticalPadding>0.02 0.01</backgroundVerticalPadding>
          <backgroundCornerRadius>0.005</backgroundCornerRadius>
-         <customIcon icon="icon_bluetooth">./_inc/images/icon-bluetooth.svg</customIcon>
-         <customIcon icon="icon_wifi">./_inc/images/icon-wifi.svg</customIcon>
-         <customIcon icon="icon_cellular">./_inc/images/icon-cellular.svg</customIcon>
-         <customIcon icon="icon_battery_charging">./_inc/images/icon-battery-charging.svg</customIcon>
-         <customIcon icon="icon_battery_full">./_inc/images/icon-battery-full.svg</customIcon>
-         <customIcon icon="icon_battery_high">./_inc/images/icon-battery-high.svg</customIcon>
-         <customIcon icon="icon_battery_medium">./_inc/images/icon-battery-medium.svg</customIcon>
-         <customIcon icon="icon_battery_low">./_inc/images/icon-battery-low.svg</customIcon>
       </systemstatus>
       <helpsystem name="help-menu-view">
          <scope>menu</scope>
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.95</pos>
+         <origin>0.5 1</origin>
+         <pos>0.5 0.9875</pos>
          <iconColor>cccccc</iconColor>
          <textColor>cccccc</textColor>
-         <backgroundColor>181818</backgroundColor>
-         <backgroundHorizontalPadding>0.05 0.05</backgroundHorizontalPadding>
-         <backgroundVerticalPadding>0.05 0.05</backgroundVerticalPadding>
+         <backgroundColor>222222</backgroundColor>
+         <backgroundHorizontalPadding>0.01 0.01</backgroundHorizontalPadding>
+         <backgroundVerticalPadding>0.015 0.02</backgroundVerticalPadding>
          <backgroundCornerRadius>0.005</backgroundCornerRadius>
+         <entryRelativeScale>0.9</entryRelativeScale>
       </helpsystem>
       <!-- End: menu styling resets -->
       <image name="background">
