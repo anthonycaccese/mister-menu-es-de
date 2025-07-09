@@ -13,7 +13,7 @@ license:       creative commons CC-BY-NC-SA
    -->
    <variables>
       <titleFont>./_inc/fonts/RetroGaming.ttf</titleFont>
-      <listFont>./_inc/fonts/ArcadePix.ttf</listFont>
+      <listFont>./_inc/fonts/PressStart2P-vaV7.ttf</listFont>
       <regularFont>./_inc/fonts/Oxygen-Regular.ttf</regularFont>
       <spacerImage>./_inc/images/space.png</spacerImage>
    </variables>
@@ -167,42 +167,6 @@ license:       creative commons CC-BY-NC-SA
          <backgroundVerticalPadding>0.02222222 0.02222222</backgroundVerticalPadding><!-- 16 -->
          <fontSize>${helpFontSize}</fontSize>
          <entries>start,select,b,a,x</entries>
-         <!-- Start Button -->
-         <customButtonIcon button="button_start_PS123">./_inc/images/help-button-start.svg</customButtonIcon>
-         <customButtonIcon button="button_start_PS4">./_inc/images/help-button-start.svg</customButtonIcon>
-         <customButtonIcon button="button_start_PS5">./_inc/images/help-button-start.svg</customButtonIcon>
-         <customButtonIcon button="button_start_SNES">./_inc/images/help-button-start.svg</customButtonIcon>
-         <customButtonIcon button="button_start_switch">./_inc/images/help-button-start.svg</customButtonIcon>
-         <customButtonIcon button="button_start_XBOX">./_inc/images/help-button-start.svg</customButtonIcon>
-         <customButtonIcon button="button_start_XBOX360">./_inc/images/help-button-start.svg</customButtonIcon>
-         <!-- Back Button -->
-         <customButtonIcon button="button_back_PS123">./_inc/images/help-button-back.svg</customButtonIcon>
-         <customButtonIcon button="button_back_PS4">./_inc/images/help-button-back.svg</customButtonIcon>
-         <customButtonIcon button="button_back_PS5">./_inc/images/help-button-back.svg</customButtonIcon>
-         <customButtonIcon button="button_back_SNES">./_inc/images/help-button-back.svg</customButtonIcon>
-         <customButtonIcon button="button_back_switch">./_inc/images/help-button-back.svg</customButtonIcon>
-         <customButtonIcon button="button_back_XBOX">./_inc/images/help-button-back.svg</customButtonIcon>
-         <customButtonIcon button="button_back_XBOX360">./_inc/images/help-button-back.svg</customButtonIcon>
-         <!-- East Button -->
-         <customButtonIcon button="button_b_XBOX">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_b_PS">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_b_switch">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_b_SNES">./_inc/images/help-button-east.svg</customButtonIcon>
-         <!-- South Button -->
-         <customButtonIcon button="button_a_XBOX">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_a_PS">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_a_switch">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_a_SNES">./_inc/images/help-button-south.svg</customButtonIcon>
-         <!-- North Button -->
-         <customButtonIcon button="button_y_XBOX">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="button_y_PS">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="button_y_switch">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_y_SNES">./_inc/images/help-button-north.svg</customButtonIcon>
-         <!-- West Button -->
-         <customButtonIcon button="button_x_XBOX">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_x_PS">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_x_switch">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="button_x_SNES">./_inc/images/help-button-west.svg</customButtonIcon>
       </helpsystem>
    </view>
 
